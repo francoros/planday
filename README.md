@@ -1,4 +1,4 @@
-# **PLANDAY - Trial Activation Pipeline**
+# **PLANDAY 
 
 I could have simply ingested the file into a table and run SQL queries to generate the results. However, I chose to build it this way because I believe it more closely simulates a real-world data pipeline scenario.
 
@@ -61,7 +61,4 @@ The **dbt project** follows a structured, layered approach:
 
 Lastly, dashboards or charts can be created using tools like **Power BI**, **Tableau**, or **Looker** to provide insights into trial activations and goal completion.
 
----
-
-This structure ensures scalability, transparency, and data quality throughout the process, while also enabling visualization tools to easily interact with the final data sets.
 

@@ -20,8 +20,10 @@ The Airflow DAG orchestrates the following steps:
 Ingestion: Ingest raw event data into the raw_behavioral_events table in Snowflake.
 
 dbt Transformation: Trigger dbt models to perform data transformations, creating two key models:
-    # trial_goals: Tracks whether each organization has completed specific trial goals.
-    # trial_activation: Tracks whether an organization has completed all the goals, marking them as "trial activated."
+
+# trial_goals: Tracks whether each organization has completed specific trial goals.
+# trial_activation: Tracks whether an organization has completed all the goals, marking them as "trial activated."
+
 Quality Checks: After the dbt transformation, I created some minor queries to run in Snowflake and check the quality of the information
 
 # 2. dbt Models

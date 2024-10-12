@@ -2,7 +2,7 @@
 
 I could have done it just ingesting the file in a table, and then just run some SQL queries, but I've chosen to did it like this because I think is closer to the real situation.
 
-# The pipeline was built using Apache Airflow for orchestration and DBT for SQL-based transformations, connected to a Snowflake data warehouse.
+# The pipeline was built using Apache Airflow for orchestration and DBT for SQL-based transformations, connected to a Snowflake data warehouse. The folder structure is not exactly as its going to be (I don't have airdflow and dbt installed), its like this just for understanding
 
 ## Implemented Metrics
 
@@ -20,8 +20,8 @@ The Airflow DAG orchestrates the following steps:
 Ingestion: Ingest raw event data into the raw_behavioral_events table in Snowflake.
 
 dbt Transformation: Trigger dbt models to perform data transformations, creating two key models:
-    - trial_goals: Tracks whether each organization has completed specific trial goals.
-    - trial_activation: Tracks whether an organization has completed all the goals, marking them as "trial activated."
+    # trial_goals: Tracks whether each organization has completed specific trial goals.
+    # trial_activation: Tracks whether an organization has completed all the goals, marking them as "trial activated."
 Quality Checks: After the dbt transformation, I created some minor queries to run in Snowflake and check the quality of the information
 
 # 2. dbt Models

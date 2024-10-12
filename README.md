@@ -20,6 +20,7 @@ The pipeline was built using **Apache Airflow** for orchestration and **dbt** (D
 
 3. **Average Time to Activation**:  
    The time it takes for organizations to complete all goals and achieve trial activation.
+   (This is not done because the timestamp when the organization reaches the goal is not setted, but it can assumed)
 
 ---
 

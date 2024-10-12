@@ -1,0 +1,7 @@
+# models/sources/sources.yml
+version: 2
+
+sources:
+  - name: planday_sources
+    tables:
+      - name: raw_behavioral_events

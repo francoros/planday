@@ -14,17 +14,17 @@ Average Time to Activation: This metric calculates the time it takes for organiz
 
 The project consists of two main parts:
 
-# 1. Airflow Pipeline
+## 1. Airflow Pipeline
 The Airflow DAG orchestrates the following steps:
 
-Ingestion: Ingest raw event data into the raw_behavioral_events table in Snowflake.
+# Ingestion: Ingest raw event data into the raw_behavioral_events table in Snowflake.
 
-dbt Transformation: Trigger dbt models to perform data transformations, creating two key models:
+# dbt Transformation: Trigger dbt models to perform data transformations, creating two key models:
 
-trial_goals: Tracks whether each organization has completed specific trial goals.
-trial_activation: Tracks whether an organization has completed all the goals, marking them as "trial activated."
+# trial_goals: Tracks whether each organization has completed specific trial goals.
+# trial_activation: Tracks whether an organization has completed all the goals, marking them as "trial activated."
 
-Quality Checks: After the dbt transformation, I created some minor queries to run in Snowflake and check the quality of the information
+# Quality Checks: After the dbt transformation, I created some minor queries to run in Snowflake and check the quality of the information
 
 # 2. dbt Models
 The dbt project follows a layered approach:
@@ -33,7 +33,7 @@ Staging Layer: Raw data is loaded into the raw_behavioral_events table without a
 Transformation Layer: Business logic is applied to aggregate trial goals (e.g., counting shifts created, employees invited) and produce the trial_goals table.
 Data Marts Layer: The final trial_activation table is created, showing which organizations have fully completed all trial goals.
 
-# 3. Visualisation
+# 3. Visualization
 
 Last, some charts or dashboards can be created out of it with the desired tool, i.e: PowerBi, Tableau, Looker, etc
 
